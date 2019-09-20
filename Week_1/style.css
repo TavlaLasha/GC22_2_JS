@@ -1,0 +1,13 @@
+.d1 {
+    border: solid;
+    min-height: 40px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 8px;
+    background: yellow;
+}
+.d1:hover {
+    background: lightyellow;
+}
