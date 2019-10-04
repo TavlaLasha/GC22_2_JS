@@ -1,0 +1,10 @@
+div {
+    border: solid 1px green;
+    width: 450px;
+    height: 100px;
+    padding: 10px;
+    margin: 20px auto;
+}
+#result4, #result2 input, button{
+    font-size: 2em;
+}
