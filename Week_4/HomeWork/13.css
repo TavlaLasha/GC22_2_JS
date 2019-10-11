@@ -1,0 +1,7 @@
+img {
+    width: 500px;
+}
+body {
+    background-image: radial-gradient(gray, darkblue);
+    background-repeat: no-repeat;
+}
