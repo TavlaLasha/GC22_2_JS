@@ -1,0 +1,32 @@
+body {
+    background-color: #000066;
+    color: white;
+    margin-left: 80px;
+}
+.p1 {
+    font-size: 2em;
+}
+.p1 > strong {
+    color: red;
+}
+.p2 {
+    color: yellow;
+    font-style: italic;
+    font-weight: bold;
+}
+.p3 {
+    font-weight: bold;
+}
+.p4 {
+    font-size: 2em;
+    color: green;
+}
+.p5 {
+    text-shadow: 2px 1px red;
+}
+#d1, #d2 {
+    visibility: hidden;
+}
+#d2 {
+    margin-top: -270px;
+}
