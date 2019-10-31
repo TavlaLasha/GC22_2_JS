@@ -1,0 +1,13 @@
+.mytable {
+    border: solid black;
+    width: 800px;
+    height: 600px;
+}
+.mytable td {
+    border: solid black;
+    text-align: center;
+}
+.mytable td img {
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,20 @@
+#d1, #d2, #d3 {
+    margin: 10px auto;
+    width: 20px;
+    border: solid 1px red;
+    min-height: 14px;
+    text-align: center;
+}
+.tb {
+    border: solid 1px black;
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+}
+.tb td {
+    border: solid 1px black;
+    text-align: center;
+}
+table { 
+    margin: auto;
+}
