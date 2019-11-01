@@ -7,15 +7,21 @@
     <title>L205</title>
 </head>
 <body>
+    <div id="d1"></div>
     <script>
-        var i;
-        list = [];
-        i >= 2 && i <=20;
-        do {
-            list.push(i);
-            i++;
-        } while (i % 2 > 0);
-        alert(list);
+        function nums(n){
+            div = document.getElementById("d1");
+            div.innerHTML = n;
+            t = "martivia";
+            for(i=2; i< n-1; i++){
+                if(n%i == 0){
+                    t = "ar aris martivi";
+                    break;
+                }
+            }
+            console.log(t);
+        }
+        nums(7);
     </script>
 </body>
 </html>

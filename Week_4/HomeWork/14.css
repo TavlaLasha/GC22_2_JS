@@ -1,8 +1,16 @@
 img {
-    width: 500px;
+    width: 200px;
     font-size: 6em;
+    padding-top: 50px;
 }
 div {
+    width: 200px;
     font-size: 2em;
-    padding: 600px;
+    text-align: center;
+    margin:auto;
+    padding-top: 30px;
+}
+body {
+    background-image: linear-gradient(white, gray);
+    background-repeat: no-repeat;
 }
