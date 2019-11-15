@@ -1,0 +1,14 @@
+#d1 {
+    margin: auto;
+    width: 700px;
+    height: 500px;
+    border: solid 2px blue;
+    position: relative;
+}
+#d2 {
+    width: 70px;
+    height: 70px;
+    border: solid 1px red;
+    background: lightseagreen;
+    position: absolute;
+}
