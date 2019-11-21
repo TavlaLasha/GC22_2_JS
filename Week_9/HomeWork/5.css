@@ -1,0 +1,15 @@
+#d1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 1px blue;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+    transform: rotate(10deg);
+    
+}
+#d2 {
+    margin: auto;
+}

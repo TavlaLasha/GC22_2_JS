@@ -9,19 +9,27 @@ const dayNames = ["კვირა", "ორშაბათი", "სამშ�
 
 info = d.getFullYear();
 info += (", ");
-info += (monthNames[d.getMonth()]);
+info += addZero(monthNames[d.getMonth()]);
 info += (", ");
-info += (d.getDate());
+info += addZero(d.getDate());
 info += (", ");
-info += (dayNames[d.getDay()]);
+info += addZero(dayNames[d.getDay()]);
 info += (", ");
-info += (d.getHours());
+info += addZero(d.getHours());
 info += (":");
-info += (d.getMinutes());
+info += addZero(d.getMinutes());
 info += (":");
-info += (d.getSeconds());
+info += addZero(d.getSeconds());
 
 div.innerHTML = info;
+}
+function addZero(d){
+  if(d <= 9){
+      return '0' + d;
+  }
+  else{
+      return d;
+  }
 }
 
 date();

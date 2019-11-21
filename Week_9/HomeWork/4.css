@@ -9,6 +9,18 @@
     width: 70px;
     height: 70px;
     border: solid 1px red;
-    background: lightseagreen;
+    background: #00ffff;
     position: absolute;
+    box-sizing: border-box;
+}
+#d3 {
+    margin: auto;
+    width: 350px;
+    height: 100px;
+    border: solid 1px blue;
+    box-sizing: border-box;
+    padding: 10px;
+}
+input {
+    margin: 2px;
 }
