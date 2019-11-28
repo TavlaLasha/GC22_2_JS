@@ -1,65 +1,49 @@
-ge = "აბგდევზთიკლმნოპჟრსტუფქღყშცძწჩხჯჰ";
-eng = "abcdefghijklmnopqrstuvwxyz";
-ru = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-
-
-
-// text =
-// {
-//     name: "Misha",
-//     last: "Arushanian",
-//     age: 21,
-//     x: 18,
-//     9: "Hello",
-//     y: 34.9
-// };
-
-function randomSymbol(lang){
-    
-    if(lang == "ge"){
-        info="";
-        for(i=1; i<=(Math.floor(Math.random()*20)); i++){
-            index = (Math.random()*31).toFixed(0);
-            info += ge[index];
-            
-        };
-        console.log(info);
-        
-    }else if (lang == "en"){
-        info="";
-        for(i=1; i<=(Math.floor(Math.random()*20)); i++){
-            index = (Math.random()*26).toFixed(0);
-            info += eng[index];
-            
-        };
-        console.log(info);
-    }else if (lang == "ru"){
-        info="";
-        for(i=1; i<=(Math.floor(Math.random()*20)); i++){
-            index = (Math.random()*33).toFixed(0);
-            info += ru[index];
-            
-        };
-        console.log(info);
-    }
-}
-randomSymbol("ge");
-randomSymbol("en");
-randomSymbol("ru");
-
 Alphabet = {
-    ge: "აბგდევზთიკლმნოპჟრსტუფქღყშცძწჩხჯჰ",
+    ge: "აბგდევზთიკლმნოპჟრსტუფქღყშჩცძწჭხჯჰ",
     en: "abcdefghijklmnopqrstuvwxyz",
-    ru: "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+    ru: "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 } 
 
-function randSymb(lang, N){
-    info = "";
-    for(i=1; i<=N; i++){
-        index = (Math.random()*Alphabet[lang].length-1).toFixed(0);
-        info += Alphabet[lang][index];
-    }
-    
-    console.log(info);
+function randomSymbol(lang){
+        index = (Math.random()*(Alphabet[lang].length-1)).toFixed(0);
+        return Alphabet[lang][index];
 }
-randSymb("ge", 7);
+function randomWord(lang, N){
+    word = "";
+    for(var i=1; i<=N; i++){
+        word += randomSymbol(lang);
+    }
+    return word;
+}
+function randomPhrase(lang, N, T){
+    phrase = "";
+    for(var i=1; i<=T; i++){
+        phrase += randomWord(lang, N);
+        if(i==T){
+            phrase += ".";
+        }else{
+            phrase += " ";
+        }
+    }
+    return phrase;
+}
+function randomText(lang, N, T, L){
+    N = document.getElementById("i1").value;
+    T = document.getElementById("i2").value;
+    L = document.getElementById("i3").value;
+    lang = document.getElementById("s1").value;
+    div = document.getElementById("d1");
+    span = document.getElementById("sp");
+
+
+    text = "";
+    for(var i=1; i<=L; i++){
+        text += randomPhrase(lang, N, T);
+        text += " ";
+    }
+    div.style.fontSize = "1em";
+    div.style.padding = "5px";
+    div.style.textAlign = "left";
+    div.innerHTML = "";
+    div.innerHTML = text;
+}
