@@ -1,0 +1,27 @@
+#d1{
+    margin: 20px auto;
+    border: solid 1px black;
+    background: silver;
+    width: 600px;
+    height: 400px;
+}
+#d2 {
+    width: 200px;
+    margin: auto;
+}
+input {
+    margin: 10px;
+}
+.tbl{
+    border: solid 1px black;
+    width: 300px;
+    height: 400px;
+    background: white;
+}
+.tbl td {
+    border: solid 1px black;
+}
+img {
+    width: 100px;
+    height: 100px;
+}

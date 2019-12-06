@@ -1,0 +1,10 @@
+.tbl{
+    border: solid 1px black;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+.tbl td {
+    border: solid 1px black;
+    padding: 10px;
+}
