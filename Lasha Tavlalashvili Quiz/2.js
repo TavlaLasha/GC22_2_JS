@@ -1,22 +1,28 @@
-function insertTable(){
+function insertPhoto(K){
+}
+function insertTable(N, M, K){
     div = document.getElementById("d1");
-    N = document.getElementById("i1").value;
-    M = document.getElementById("i2").value;
-    K = document.getElementById("i3").value;
     pts=[];
     for(c=1; c<=K; c++){
         pts.push(c+".JPG");
     }
     console.log(pts);
     table = "<table class='tbl'>";
-    for(var n=1; n<N; n++){
+    for(var n=0; n<N; n++){
         table +="<tr>";
-        for(var i=1; i<M; i++){
+        for(var i=0; i<M; i++){
             rand = Math.floor(Math.random()*pts.length);
             randpt = pts[rand];
-            table += "<td>";
-            table += "<img src='Photos/" + randpt + "' alt='IMG'>";
-            table += "</td>";
+            ranDbool = Math.random() >= 0.5;
+            if(pts.length != 0){
+                table += "<td>";
+                table += "<img src='Photos/" + randpt + "' alt='IMG'>";
+                table += "</td>";
+            }else{
+                table += "<td>";
+                table += "</td>";
+            }
+            
             pts.splice(rand, 1);
         }
         table +="</tr>";
@@ -29,22 +35,30 @@ function iOrnot(){
     N = document.getElementById("i1").value;
     M = document.getElementById("i2").value;
     K = document.getElementById("i3").value;
+
+    Nbool = false;
+    Mbool = false;
+    Kbool = false;
+
     if(N>=2 && N <=5){
-        insertTable();
+        Nbool = true;
     }
     else{
         alert("Tqven sheiyvanet araswori striqonebis raodenoba. Scadet tavidan");
     }
     if(M>=2 && M <=5){
-        insertTable();
+        Mbool = true;
     }
     else{
         alert("Tqven sheiyvanet araswori svetebis raodenoba. Scadet tavidan");
     }
     if(K>=1 && K <8){
-        insertTable();
+        Kbool = true;
     }
     else{
         alert("Tqven sheiyvanet araswori potoebis raodenoba. Scadet tavidan");
+    }
+    if(Nbool && Mbool && Kbool){
+        insertTable(N, M, K);
     }
 }
