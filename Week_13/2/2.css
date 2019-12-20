@@ -1,0 +1,33 @@
+body {
+    background: gray;
+}
+#d1 {
+    margin:auto;
+    width: 700px;
+    height: 300px;
+    background: silver;
+    border: solid 2px white;
+    border-radius: 7px;
+    padding: 10px;
+}
+.abcChar {
+    width: 30px;
+    font-size: 20px;
+    margin: 3px;
+}
+.in {
+    padding: 5px;
+    width: 250px;
+    background: turquoise;
+    text-align: right;
+    font-size: 19px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#d2 {
+    width: 500px;
+}
+#infspan {
+    font-size: 18px;
+    color: green;
+}
